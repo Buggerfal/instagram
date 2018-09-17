@@ -7,8 +7,8 @@ let countRepair = 1;
 let checkBtnScroll = 1;
 let allBtn;
 const forScroll = "j6cq2";
-const delButton = "L3NKy";
-const delConfirm = "-Cab_";
+const addButton = "oF4XW";
+// const delConfirm = "-Cab_";
 
 function scrollPage() {
 
@@ -24,7 +24,7 @@ function scrollPage() {
             stopScroll();
             document.getElementsByClassName(forScroll)[0].scrollTop = -topScroll;
             topScroll = 520;
-         allBtn = document.getElementsByClassName(delButton);
+         allBtn = document.getElementsByClassName(addButton);
             deleteFriend();
         }
     }
@@ -53,23 +53,20 @@ function deleteFriend() {
             checkBtnScroll = 0;
         }
 
-        if (countToday === 1000 || countToday > 1000) {
+        if (countToday === 200 || countToday > 200) {
             stopMySetInterval();
             return false;
         }
 
         allBtn[count].click();
-  setTimeout(function(){
-  document.getElementsByClassName(delConfirm)[0].click();
-}, 5000);
         countToday++;
         checkBtnScroll++;
-        console.log("Отменил - " + countToday + " подписок!");
+        console.log("Добавил - " + countToday + " подписок!");
     }
 
     function stopMySetInterval() {
         clearInterval(intS);
         console.log("СКРИПТ ЗАКОНЧИЛ СВОЮ РАБОТУ!!!");
     }
-    let intS = setInterval(imitattionCLick, (28000 + rnd));
+    let intS = setInterval(imitattionCLick, (60000 + rnd));
 }
