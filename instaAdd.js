@@ -9,6 +9,7 @@ let allBtn;
 const forScroll = "j6cq2";
 const addButton = "oF4XW";
 const time = 90000;
+const timeScroll = 1000;
 
 function scrollPage() {
 
@@ -28,13 +29,13 @@ function scrollPage() {
             addFriend();
         }
     }
-    let scrollBtn = setInterval(scrollPage, 1000);
+    let scrollBtn = setInterval(scrollPage, timeScroll);
 }
 
 scrollPage();
 
 function addFriend() {
-    function scrollPages() {
+    function scrollBlock() {
         document.getElementsByClassName(forScroll)[0].scrollTop = topScroll;
         topScroll += 520;
     }
@@ -49,7 +50,7 @@ function addFriend() {
         count++;
 
         if (checkBtnScroll === 6) {
-            scrollPages();
+            scrollBlock();
             checkBtnScroll = 0;
         }
 
@@ -63,14 +64,11 @@ function addFriend() {
         checkBtnScroll++;
         console.log("Добавил - " + countToday + " подписок!");
 
-        if (document.getElementsByClassName("-Cab_")) {
-            setTimeout(function() {
-                const checkedClass = document.querySelector("div");
-                const cName = checkedClass.className;
-                elem.className = cName;
+        setTimeout(function() {
+            if (document.getElementsByClassName("-Cab_").length > 0) {
                 document.getElementsByClassName("-Cab_")[0].click();
-            }, 5000);
-        }
+            }
+        }, 5000);
     }
 
     function stopScript() {
