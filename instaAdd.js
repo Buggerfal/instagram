@@ -62,6 +62,15 @@ function addFriend() {
         countToday++;
         checkBtnScroll++;
         console.log("Добавил - " + countToday + " подписок!");
+
+        if (document.getElementsByClassName("-Cab_")) {
+            setTimeout(function() {
+                const checkedClass = document.querySelector("div");
+                const cName = checkedClass.className;
+                elem.className = cName;
+                document.getElementsByClassName("-Cab_")[0].click();
+            }, 5000);
+        }
     }
 
     function stopScript() {
