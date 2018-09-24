@@ -1,7 +1,7 @@
 let topScroll = 520;
 let scrollCount = 0;
 let count = 1;
-let rnd = 1000;
+let rndTime = 1000;
 let countToday = 0;
 let countRepair = 1;
 let checkBtnScroll = 1;
@@ -45,7 +45,7 @@ function addFriend() {
     }
 
     function imitattionCLick() {
-        rnd = randomTime(1000, 9000);
+        rndTime = randomTime(1000, 9000);
         count++;
 
         if (checkBtnScroll === 6) {
@@ -68,5 +68,5 @@ function addFriend() {
         clearInterval(intS);
         console.log("СКРИПТ ЗАКОНЧИЛ СВОЮ РАБОТУ!!!");
     }
-    let intS = setInterval(imitattionCLick, (time + rnd));
+    let intS = setInterval(imitattionCLick, (time + rndTime));
 }
