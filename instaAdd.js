@@ -8,7 +8,7 @@ let checkBtnScroll = 1;
 let allBtn;
 const forScroll = "j6cq2";
 const addButton = "oF4XW";
-// const delConfirm = "-Cab_";
+const time = 90000;
 
 function scrollPage() {
 
@@ -68,5 +68,5 @@ function addFriend() {
         clearInterval(intS);
         console.log("СКРИПТ ЗАКОНЧИЛ СВОЮ РАБОТУ!!!");
     }
-    let intS = setInterval(imitattionCLick, (60000 + rnd));
+    let intS = setInterval(imitattionCLick, (time + rnd));
 }
