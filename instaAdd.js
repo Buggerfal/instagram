@@ -54,7 +54,7 @@ function addFriend() {
         }
 
         if (countToday === 1000 || countToday > 1000) {
-            stopMySetInterval();
+            stopScript();
             return false;
         }
 
@@ -64,7 +64,7 @@ function addFriend() {
         console.log("Добавил - " + countToday + " подписок!");
     }
 
-    function stopMySetInterval() {
+    function stopScript() {
         clearInterval(intS);
         console.log("СКРИПТ ЗАКОНЧИЛ СВОЮ РАБОТУ!!!");
     }
