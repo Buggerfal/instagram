@@ -25,7 +25,7 @@ function scrollPage() {
             document.getElementsByClassName(forScroll)[0].scrollTop = -topScroll;
             topScroll = 520;
             allBtn = document.getElementsByClassName(addButton);
-            deleteFriend();
+            addFriend();
         }
     }
     let scrollBtn = setInterval(scrollPage, 1000);
@@ -33,7 +33,7 @@ function scrollPage() {
 
 scrollPage();
 
-function deleteFriend() {
+function addFriend() {
     function scrollPages() {
         document.getElementsByClassName(forScroll)[0].scrollTop = topScroll;
         topScroll += 520;
