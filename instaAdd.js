@@ -24,7 +24,7 @@ function scrollPage() {
             stopScroll();
             document.getElementsByClassName(forScroll)[0].scrollTop = -topScroll;
             topScroll = 520;
-         allBtn = document.getElementsByClassName(addButton);
+            allBtn = document.getElementsByClassName(addButton);
             deleteFriend();
         }
     }
@@ -53,7 +53,7 @@ function deleteFriend() {
             checkBtnScroll = 0;
         }
 
-        if (countToday === 200 || countToday > 200) {
+        if (countToday === 1000 || countToday > 1000) {
             stopMySetInterval();
             return false;
         }
