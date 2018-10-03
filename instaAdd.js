@@ -6,7 +6,7 @@ let countToday = 0;
 let countRepair = 1;
 let checkBtnScroll = 1;
 let allBtn;
-const forScroll = "j6cq2";
+const forScroll = "isgrP";
 const addButton = "oF4XW";
 const time = 90000;
 const timeScroll = 1000;
